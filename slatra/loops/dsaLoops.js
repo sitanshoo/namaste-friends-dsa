@@ -33,7 +33,7 @@ console.log(countNegatives(arr1));
 
 //Ques3
 // Write a function that returns the largest number in an array
-let arr2 = [5, 0, 10, 8, 17, 1, -20];
+let arr3 = [5, 0, 10, 8, 17, 1, -20];
 
 function findLargest(arr) {
   let largest = -1;
@@ -45,11 +45,11 @@ function findLargest(arr) {
   return largest;
 }
 
-console.log(findLargest(arr2));
+console.log(findLargest(arr3));
 
 //Ques4
 // Write a function that returns the smallest number in an array
-let arr3 = [5, 0, 10, 8, 17, 1, -20];
+let arr4 = [5, 0, 10, 8, 17, 1, -20];
 
 function findSmallest(arr) {
   let smallest = Infinity;
@@ -57,11 +57,29 @@ function findSmallest(arr) {
     console.log(smallest, i);
 
     if (smallest > arr[i]) {
-      //smallest=5, 0,
       smallest = arr[i];
     }
   }
   return smallest;
 }
 
-console.log(findSmallest(arr2));
+console.log(findSmallest(arr4));
+
+//Ques5
+// Find Second Largest number in an array
+function secondLargest(arr) {
+  let largest = -Infinity;
+  let seclargest = -Infinity;
+  for (let i = 0; i < arr.length; i++) {
+    if (largest < arr[i]) {
+      seclargest = largest;
+      largest = arr[i];
+    } else if (seclargest < arr[i]) {
+      seclargest = arr[i];
+    }
+  }
+  return seclargest;
+}
+let arr5 = [14, 92, 30, 234, 82, 7, 1234, 20, 18];
+let result = secondLargest(arr5);
+console.log(result);
