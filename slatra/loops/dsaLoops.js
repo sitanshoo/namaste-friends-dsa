@@ -36,7 +36,7 @@ console.log(countNegatives(arr1));
 let arr3 = [5, 0, 10, 8, 17, 1, -20];
 
 function findLargest(arr) {
-  let largest = -1;
+  let largest = -1; //the least number (lowest) (can also use -Infinity)
   for (let i = 0; i < arr.length; i++) {
     if (largest < arr[i]) {
       largest = arr[i];
