@@ -24,7 +24,6 @@ function maxProfit(arr) {
       min = arr[i];
     }
 
-    console.log(arr[i] - min > maxDiff, maxDiff, arr[i] - min);
     if (arr[i] - min > maxDiff) {
       maxDiff = arr[i] - min;
     }
